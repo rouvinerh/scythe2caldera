@@ -1,5 +1,6 @@
 # scythe2caldera
-Converts SCYTHE profiles to Caldera profiles. 
+Converts SCYTHE profiles from their community threats repository to Caldera profiles. 
+https://github.com/scythe-io/community-threats
 
 # Usage:
 ```bash
