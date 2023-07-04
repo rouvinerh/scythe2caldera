@@ -1,0 +1,5 @@
+# ignore files generated
+*.yml
+adversaries
+abilities 
+__pycache__
