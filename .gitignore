@@ -3,3 +3,4 @@
 adversaries
 abilities 
 __pycache__
+*.pyc
