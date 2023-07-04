@@ -1,0 +1,30 @@
+- technique_id: T1070.001
+  privilege: ''
+  buckets: []
+  delete_payload: true
+  description: Generated from SCYTHE
+  technique_name: T1070.001
+  additional_info:
+    cleanup: '[]'
+  repeatable: false
+  executors:
+    - payloads: []
+      code:
+      variations: []
+      command: wevtutil cl application
+      additional_info: {}
+      build_target:
+      uploads: []
+      parsers: []
+      timeout: 60
+      cleanup: []
+      platform: windows
+      language:
+      name: cmd
+  requirements: []
+  plugin: ''
+  singleton: true
+  access: {}
+  name: defense-evasion 15
+  tactic: defense-evasion
+  id: ac393bde-a3ad-492e-82e0-d9fe27d3a0c5

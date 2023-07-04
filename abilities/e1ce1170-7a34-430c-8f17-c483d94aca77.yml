@@ -1,0 +1,30 @@
+- technique_id: T1033
+  privilege: ''
+  buckets: []
+  delete_payload: true
+  description: Generated from SCYTHE
+  technique_name: T1033
+  additional_info:
+    cleanup: '[]'
+  repeatable: false
+  executors:
+    - payloads: []
+      code:
+      variations: []
+      command: whoami
+      additional_info: {}
+      build_target:
+      uploads: []
+      parsers: []
+      timeout: 60
+      cleanup: []
+      platform: windows
+      language:
+      name: cmd
+  requirements: []
+  plugin: ''
+  singleton: true
+  access: {}
+  name: discovery 2
+  tactic: discovery
+  id: e1ce1170-7a34-430c-8f17-c483d94aca77

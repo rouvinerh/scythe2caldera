@@ -1,0 +1,22 @@
+adversary_id: cc5c52b9-bd59-4f8a-b8c5-8c222ce8b9a0
+name: Lockbit - Updated Tags (Generated from SCYTHE)
+description: Lockbit Ransomware emulation updated with description fields - https://www.ic3.gov/Media/News/2022/220204.pdf
+atomic_ordering:
+- 7c23a83a-b9f3-4c11-8c91-affbd6a837d1
+- e1ce1170-7a34-430c-8f17-c483d94aca77
+- 5b061b73-2397-459c-bdc3-6a6ab3a02744
+- 6e242762-2a7c-4c3e-aefb-1d55725d1835
+- ea031700-7e62-482b-a228-d7e6e07f53c3
+- 91b35068-a0cb-4c62-9828-11fb7f565d9c
+- 22332d13-8c87-4bca-bbb5-90a0572e1cdc
+- ac324f65-776b-4034-82a4-f869fc949e46
+- b816a9a3-e4f0-4006-847c-8496900b164f
+- e545daf3-dc85-4010-963a-b56921ecaab4
+- 382872a3-bebb-46b1-8ffc-7015821f88ea
+- 536c0738-d582-4c4e-9fe6-48db2ad71d9f
+- d193efb3-2a40-4192-9889-435e5e67f96e
+- aa2ff771-a895-4345-a94d-4c7741b7162c
+- ac393bde-a3ad-492e-82e0-d9fe27d3a0c5
+- 565608d8-a9d2-4735-9f01-cbd6a860eeba
+objective: 3a3ea8b8-79ba-4030-9822-bcbab59e6509
+tags: []

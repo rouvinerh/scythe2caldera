@@ -1,0 +1,30 @@
+- technique_id: T1485
+  privilege: ''
+  buckets: []
+  delete_payload: true
+  description: Generated from SCYTHE
+  technique_name: T1485
+  additional_info:
+    cleanup: '[]'
+  repeatable: false
+  executors:
+    - payloads: []
+      code:
+      variations: []
+      command: cmd /c rmdir /Q /S ""%USERPROFILE%\Desktop\LockBit""
+      additional_info: {}
+      build_target:
+      uploads: []
+      parsers: []
+      timeout: 60
+      cleanup: []
+      platform: windows
+      language:
+      name: cmd
+  requirements: []
+  plugin: ''
+  singleton: true
+  access: {}
+  name: impact 8
+  tactic: impact
+  id: ac324f65-776b-4034-82a4-f869fc949e46

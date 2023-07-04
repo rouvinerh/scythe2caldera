@@ -1,0 +1,30 @@
+- technique_id: T1016
+  privilege: ''
+  buckets: []
+  delete_payload: true
+  description: Generated from SCYTHE
+  technique_name: T1016
+  additional_info:
+    cleanup: '[]'
+  repeatable: false
+  executors:
+    - payloads: []
+      code:
+      variations: []
+      command: net use
+      additional_info: {}
+      build_target:
+      uploads: []
+      parsers: []
+      timeout: 60
+      cleanup: []
+      platform: windows
+      language:
+      name: cmd
+  requirements: []
+  plugin: ''
+  singleton: true
+  access: {}
+  name: discovery 5
+  tactic: discovery
+  id: ea031700-7e62-482b-a228-d7e6e07f53c3
