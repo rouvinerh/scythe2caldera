@@ -6,5 +6,5 @@ Converts SCYTHE profiles to Caldera profiles.
 $ python3 convert.py tactics.json
 [+] Generated!
 $ ls    
-abilities  adversaries convert.py mitre_tactics.py tactics.json
+abilities adversaries convert.py mitre_tactics.py tactics.json
 ```
