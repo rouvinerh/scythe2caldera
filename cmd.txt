@@ -1,0 +1,48 @@
+T1033 --> whoami
+T1082 --> systeminfo
+T1082 --> fsutil fsinfo drives
+T1083 --> cmd /c dir .\\
+T1059 --> cmd /c dir .\\
+T1059.003 --> cmd /c dir .\\
+T1083 --> attrib /D
+T1033 --> net user
+T1069.001 --> net localgroup
+T1033 --> net accounts
+T1059.001 --> powershell -exec bypass %TEMP%\ExtractLogins.ps1
+T1033 --> powershell -exec bypass %TEMP%\ExtractLogins.ps1
+T1546.013 --> powershell -exec bypass %TEMP%\DNSDump.ps1
+T1018 --> powershell -exec bypass %TEMP%\DNSDump.ps1
+T1016 --> ipconfig /all
+T1049 --> netstat -ano
+T1016 --> cmd /c echo %USERDOMAIN%
+T1059.003 --> cmd /c echo %USERDOMAIN%
+T1059 --> cmd /c echo %USERDOMAIN%
+T1087.002 --> net user /domain
+T1087 --> net user /domain
+T1087.002 --> net group /domain
+T1087 --> net group /domain
+T1059 --> cmd /c echo %LOGONSERVER%
+T1059.003 --> cmd /c echo %LOGONSERVER%
+T1018 --> cmd /c echo %LOGONSERVER%
+T1059 --> cmd /c echo %USERDNSDOMAIN%
+T1059.003 --> cmd /c echo %USERDNSDOMAIN%
+T1016 --> cmd /c echo %USERDNSDOMAIN%
+T1018 --> nslookup $(24).response["result"].strip("\\").strip("\r\n").suffix(".")$(25).response["result"].strip("\r\n")
+T1018 --> ping -n 1 $(24).response["result"].strip("\\").strip("\r\n").suffix(".")$(25).response["result"].strip("\r\n")
+T1018 --> tracert $(24).response["result"].strip("\\").strip("\r\n").suffix(".")$(25).response["result"].strip("\r\n")
+T1059.005 --> cscript %TEMP%\GetUserSPNs.vbs
+T1059 --> cscript %TEMP%\GetUserSPNs.vbs
+T1087 --> cscript %TEMP%\GetUserSPNs.vbs
+T1087.002 --> cscript %TEMP%\GetUserSPNs.vbs
+T1070 --> cmd /c del %TEMP%\ExtractLogins.ps1
+T1059.003 --> cmd /c del %TEMP%\ExtractLogins.ps1
+T1059 --> cmd /c del %TEMP%\ExtractLogins.ps1
+T1070 --> cmd /c del %TEMP%\logs1.txt
+T1059 --> cmd /c del %TEMP%\logs1.txt
+T1059.003 --> cmd /c del %TEMP%\logs1.txt
+T1070 --> cmd /c del %TEMP%\DNSDump.ps1
+T1059.003 --> cmd /c del %TEMP%\DNSDump.ps1
+T1059 --> cmd /c del %TEMP%\DNSDump.ps1
+T1070 --> cmd /c del %TEMP%\addcat.csv
+T1059.003 --> cmd /c del %TEMP%\addcat.csv
+T1059 --> cmd /c del %TEMP%\addcat.csv

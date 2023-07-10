@@ -77,7 +77,7 @@ def generate_abilities():
         'technique_id': parts[0].strip(),
         'privilege': '',
         'buckets': [],
-        'delete_payload': True,
+        'delete_payload': False,
         'description': 'Generated from SCYTHE',
         'technique_name': parts[0].strip(),
         'additional_info': {
@@ -160,6 +160,7 @@ def main():
     json_file = sys.argv[1]
     create_directories()
     get_threats()
+
     adversary_name, description = scrape_json(json_file)
     
     generate_abilities()
@@ -169,7 +170,6 @@ def main():
 
     os.remove('final.yaml')
     os.remove('output.yaml')
-    
 
 if __name__ == '__main__':
     main()

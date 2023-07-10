@@ -12,4 +12,4 @@ $ ls
 abilities adversaries convert.py mitre_tactics.py tactics.json
 ```
 
-To reset, run `./reset.sh`
+To reset, run `./reset.sh`.
