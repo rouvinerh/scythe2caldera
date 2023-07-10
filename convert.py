@@ -13,15 +13,21 @@ uuid_list = []
 def generate_adversary_id():
     return str(uuid.uuid4())
 
+def create_directories():
+    directories = ['adversaries', 'abilities', 'payloads']
+    for directory in directories:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+def get_threats():
+    os.system("git submodule init")
+    os.system("git submodule update")
+
 def lookup_tactic(tech):
     for tactic, techniques in mitre_tactics.items():
         if tech in techniques:
             return tactic
     return None
-
-def get_threats():
-    os.system("git submodule init")
-    os.system("git submodule update")
 
 def find_payloads(full_name):
     full = full_name.split()
@@ -55,12 +61,6 @@ def scrape_json(json_file_path):
                         output = f"{technique} --> {cmd}\n"
                         output_file.write(output)
     return adversary_name, description
-
-def create_directories():
-    directories = ['adversaries', 'abilities', 'payloads']
-    for directory in directories:
-        if not os.path.exists(directory):
-            os.makedirs(directory)
 
 def generate_abilities():
     with open('cmd.txt','r') as file:
@@ -124,7 +124,7 @@ def generate_abilities():
             file.writelines(modified_lines)
 
         uuid_list.append(uuid)
-        i += 1
+        i++
 
 def generate_adversary(name, desc):
     yaml = YAML()
@@ -156,8 +156,8 @@ def main():
         print("Please provide the JSON input file.")
         print("Usage: python3 scrape.py <scythe_json_file>")
         sys.exit(1)
-
     json_file = sys.argv[1]
+
     create_directories()
     get_threats()
 
@@ -165,9 +165,10 @@ def main():
     
     generate_abilities()
     generate_adversary(adversary_name, description)
-    print("[+] Generated!")
-    print("[+] Commands to be run can be found in cmd.txt.")
 
+    print("[+] Generated!")
+    print("[+] Commands run can be found in cmd.txt.")
+    print("[+] Copy the advesaries, abilities and payloads folder to the Caldera Data file to generate the profiles!")
     os.remove('final.yaml')
     os.remove('output.yaml')
 
