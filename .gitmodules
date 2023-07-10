@@ -1,0 +1,3 @@
+[submodule "community-threats"]
+	path = community-threats
+	url = https://github.com/scythe-io/community-threats

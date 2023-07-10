@@ -4,3 +4,6 @@ adversaries
 abilities 
 __pycache__
 *.pyc
+*.json
+community-threats
+payloads

@@ -19,11 +19,26 @@ def lookup_tactic(tech):
             return tactic
     return None
 
+def get_threats():
+    os.system("git submodule init")
+    os.system("git submodule update")
+
+def find_payloads(full_name):
+    full = full_name.split()
+    name = full[0]
+    print(f"[+] Adversary name: {name}")
+    if os.path.exists(f"community-threats/{name}/VFS"):
+        os.system(f"cp community-threats/{name}/VFS/* payloads/")
+        print("[+] Payloads coped!")
+    else:
+        print("[-] No payloads found.")
+
 def scrape_json(json_file_path):
     with open(json_file_path, 'r') as json_file:
         json_data = json.load(json_file)
     script = json_data.get("threat", {}).get("script", {})
     adversary_name = json_data["threat"]["name"]
+    find_payloads(adversary_name)
     description = json_data["threat"]["description"]
     
     if os.path.exists('cmd.txt'):
@@ -42,7 +57,7 @@ def scrape_json(json_file_path):
     return adversary_name, description
 
 def create_directories():
-    directories = ['adversaries', 'abilities']
+    directories = ['adversaries', 'abilities', 'payloads']
     for directory in directories:
         if not os.path.exists(directory):
             os.makedirs(directory)
@@ -143,17 +158,18 @@ def main():
         sys.exit(1)
 
     json_file = sys.argv[1]
-
-    adversary_name, description = scrape_json(json_file)
     create_directories()
-
+    get_threats()
+    adversary_name, description = scrape_json(json_file)
+    
     generate_abilities()
     generate_adversary(adversary_name, description)
     print("[+] Generated!")
+    print("[+] Commands to be run can be found in cmd.txt.")
 
     os.remove('final.yaml')
     os.remove('output.yaml')
-    os.remove('cmd.txt')
+    
 
 if __name__ == '__main__':
     main()
